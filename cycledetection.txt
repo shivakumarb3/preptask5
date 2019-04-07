@@ -1,0 +1,21 @@
+ static boolean hasCycle(SinglyLinkedListNode head) {
+        SinglyLinkedListNode slow,speed;
+        slow=head;speed=head;
+         while(true)
+         {
+             
+             if(slow==null||speed==null||speed.next==null)
+             {
+                 return false;
+             }
+             slow=slow.next;
+             speed=speed.next.next;
+             if(slow==speed)
+             {
+                 return true;
+
+             }
+         }
+
+
+    }
